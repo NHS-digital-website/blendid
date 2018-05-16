@@ -1,0 +1,14 @@
+{% macro searchStrip() %}
+<form role="search" method="get" action="" class="search-strip" aria-label="Search">
+    <div class="search-strip__contents">
+        <div class="search-strip__table-cell">
+            <input type="text" name="query" id="query" class="search-strip__input" placeholder="Search the website" value="" aria-label="Search the website">
+        </div>
+        <div class="search-strip__table-cell search-strip__table-cell--button">
+            <button data-uipath="search.button" class="search-strip__button" aria-label="Search the website">
+                <img src="images/icon-search-white.png" alt="Magnifying glass" />
+            </button>
+        </div>
+    </div>
+</form>
+{% endmacro %}

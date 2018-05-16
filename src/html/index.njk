@@ -5,6 +5,7 @@
 #}
 
 {% from 'components/breadcrumb.njk' import breadcrumb %}
+{% from 'components/search-strip.njk' import searchStrip %}
 
 {% extends 'layouts/application.njk' %}
 
@@ -14,6 +15,12 @@
     <div class="grid-row">
       <div class="column column--reset">
         {{ breadcrumb() }}
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column column--reset">
+        {{ searchStrip() }}
       </div>
     </div>
   </div>
