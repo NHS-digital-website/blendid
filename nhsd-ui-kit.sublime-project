@@ -4,7 +4,10 @@
 		{
 			"folder_exclude_patterns":
 			[
-				"public"
+				"public",
+        "node_modules",
+        "extras",
+        "bin",
 			],
 			"path": "."
 		},

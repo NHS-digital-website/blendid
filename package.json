@@ -59,6 +59,7 @@
     "minimist": "^1.2.0",
     "node-fs-extra": "^0.8.2",
     "node-sass-glob-importer": "^5.0.0-alpha.5",
+    "normalize-scss": "^7.0.1",
     "open": "0.0.5",
     "plugin-error": "^0.1.2",
     "pretty-hrtime": "1.0.3",

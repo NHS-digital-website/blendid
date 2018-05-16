@@ -1,0 +1,31 @@
+@import "../environment/settings/colours";
+@import "../environment/settings/typography";
+
+hr,
+.hr {
+  background-color: $col-senary;
+  border: 0;
+  height: $baseline-grid-unit;
+  text-align: left;
+
+  .callout--alert & {
+    background-color: $col-quaternary;
+  }
+
+  .callout--severe & {
+    background-color: $col-septenary;
+  }
+}
+
+.hr--short {
+    width: 100%;
+    max-width: 220px;
+
+    @include media($max-width: $min-desktop-width, $ignore-for-ie: true) {
+        max-width: 100%;
+    }
+}
+
+.hr--light {
+    background-color: rgba($col-septenary, 0.5);
+}

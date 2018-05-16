@@ -1,0 +1,93 @@
+@import "../environment/settings/colours";
+@import "../environment/settings/typography";
+@import "../environment/tools/mixins/typography";
+
+table {
+    width: 100% !important;
+    table-layout: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    border: none;
+
+    caption {
+        text-align: left;
+        margin-bottom: round($base-font-size);
+
+        @include bold-font($h3-font-size/1px);
+
+        @include media($max-width: $min-desktop-width, $ignore-for-ie: true) {
+            margin-bottom: round($base-font-size * 0.75);
+        }
+    }
+
+    th,
+    td {
+        padding: 12px 7px;
+        text-align: left;
+        border: none;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+
+        @include media($max-width: $min-desktop-width, $ignore-for-ie: true) {
+            padding: 13px 5px;
+        }
+    }
+
+    th {
+        background-color: $col-15;
+        border-left: 2px solid $col-septenary;
+
+        &,
+        * {
+            @include bold-font(14);
+        }
+
+        &:first-child {
+            border-left: none;
+        }
+    }
+
+    td {
+        border-top: 1px solid $col-15;
+
+        &,
+        * {
+            @include core-font(14);
+        }
+    }
+
+    tr:first-child td {
+        border-top: none;
+    }
+}
+
+.table-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    
+    @include media($max-width: $min-desktop-width, $ignore-for-ie: true) {
+        @include touch-scroll-x;
+    }
+}
+
+.table--two-column th {
+    width: 50%;
+}
+
+.table-emphasised {
+    th,
+    td {
+        &:first-child {
+            min-width: 240px;
+            @include bold-font(16);
+        }
+
+        &,
+        * {
+            @include core-font(16);
+        }
+    }
+}

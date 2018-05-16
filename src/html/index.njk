@@ -1,0 +1,21 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% from 'components/breadcrumb.njk' import breadcrumb %}
+
+{% extends 'layouts/application.njk' %}
+
+{% block content %}
+  
+  <div class="grid-wrapper">
+    <div class="grid-row">
+      <div class="column column--reset">
+        {{ breadcrumb() }}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

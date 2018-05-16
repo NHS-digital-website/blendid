@@ -1,0 +1,88 @@
+// CTA List Block
+// ==========================================================================
+//
+// Example
+//  <ol class="list--reset cta-list">
+//      <li>
+//          <article class="cta">
+//              <h2 class="cta__title"><a href="#">NHS Digital staff shortlisted for Women in IT Awards</a></h2>
+//              <time class="cta__meta" datetime="#">Date published: 3 January 2018</time>
+//          </article>
+//      </li>
+//      <li>
+//          <article class="cta">
+//              <h2 class="cta__title"><a href="#">NHS Digital welcomes everyone</a></h2>
+//              <time class="cta__meta" datetime="#">Date published: 2 January 2018</time>
+//          </article>
+//      </li>
+//  </ol>
+//
+//
+.cta-list {
+    @include clearfix;
+
+    .cta {
+        margin-bottom: $vertical-gap;
+    }
+
+    .cta--detailed {
+        margin-bottom: 0;
+    }
+}
+
+// To make sure that the height of 2 CTAs match in a grid layout
+.cta-list--grid {
+    .cta {
+        min-height: 132px;
+        margin-bottom: $gutter * 2;
+    }    
+
+    @include media(tablet) {
+        .grid-row:last-child {
+            .cta {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include media($max-width: $min-desktop-width, $ignore-for-ie: true) {
+        .cta {
+            min-height: 0;
+        }
+    }
+}
+
+.cta-list--sections {
+    .cta {
+        border-top: 1px solid $grey-4;
+        padding-top: $gutter * 2;
+        margin-bottom: $gutter;
+
+        &:first-child {
+            border: none;
+            padding-top: 0;
+        }
+
+        & + .cta {
+            padding-top: round($gutter * 1.5);
+        }
+    }
+}
+
+.cta-list--sections-busy {
+    .cta {
+        margin-top: $gutter * 2;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.debug {
+    .cta-list {
+        .cta {
+            background: rgba(255, 0, 255, 0.2);
+        }
+    }
+}

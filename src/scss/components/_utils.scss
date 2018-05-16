@@ -1,0 +1,37 @@
+/* Utils */
+
+.no-border {
+    border: none;
+}
+
+.no-top-padding {
+    padding-top: 0;
+}
+
+.no-bottom-padding {
+    padding-bottom: 0;
+}
+
+.no-top-margin {
+    margin-top: 0;
+}
+
+.no-bottom-margin {
+    margin-top: 0;
+}
+
+.strong {
+    font-weight: 600;
+}
+
+.sticky {
+    @include media($min-width: $min-desktop-width) {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 1;
+
+        &.sticky--top {
+            top: 0;
+        }
+    }
+}

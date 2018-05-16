@@ -1,0 +1,65 @@
+@import "../environment/settings/colours";
+@import "../environment/tools/mixins/addons";
+@import "../environment/tools/mixins/custom";
+
+a {
+    @include no-tap-highlight;
+    
+    &:link {
+        color: $link-colour;
+    }
+
+    &:visited {
+        color: $link-visited-colour;
+    }
+
+    &:hover {
+        color: $link-hover-colour;
+    }
+
+    &:active {
+        color: $link-active-colour;
+    }
+
+    &:focus {
+        outline: 3px solid $focus-colour;
+    }
+
+    @include no-tap-highlight;
+}
+
+.link--reverse-polarity {
+    @include link-reverse-polarity;
+}
+
+.white-links {
+    a {
+        text-decoration: none;
+
+        &:link,
+        &:visited,
+        &:active,
+        &:hover,
+        &:focus {
+            color: $col-septenary;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:focus {
+            outline: 3px solid $focus-colour;
+        }
+    }
+}
+
+.white-links--secondary {
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

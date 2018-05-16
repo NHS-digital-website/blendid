@@ -1,0 +1,200 @@
+// CTA Block
+// ==========================================================================
+//
+// Example #1
+//  <article class="cta">
+//      <h2 class="cta__title"><a href="#">Childpage document #1 title</a></h2>
+//      <p class="cta__text">Completely reintermediate world-class technologies</p>
+//  </article>
+//
+//
+// Example #2
+//  <article class="cta">
+//      <h2 class="cta__title"><a href="#">NHS Digital welcomes everyone</a></h2>
+//      <time class="cta__meta" datetime="#">Date published: 2 January 2018</time>
+//  </article>
+//
+// Check out `_cta-list.scss` for examples of using list of CTA blocks
+//
+
+.cta {
+    .cta__title {
+        margin-bottom: 0;
+
+        @include bold-font(18);
+    }
+
+    .cta__subtitle {
+        @include bold-font(16);
+
+        margin-bottom: $gutter;
+    }
+
+    .cta__label {
+        @include bold-font(14);
+        margin-bottom: 0;
+
+        position: relative;
+        display: inline-block;
+        border: 1px solid rgba($col-15, 0.5);
+        border-radius: 4px;
+        padding: 3px 8px 2px;
+        margin-left: -8px;
+        left: 8px;
+        margin-bottom: 2px;
+    }
+
+    .cta__text {
+        margin-top: 0;
+
+        @include core-font(18);
+    }
+
+    .cta__meta {
+        display: block;
+        margin-top: 0;
+        @include core-font(16);
+    }
+
+    .cta__button {
+        margin-top: $gutter;
+    }
+}
+
+// Large CTA
+.cta--large {
+    .cta__title{
+        @include bold-font(26);
+        margin-bottom: round($gutter * 0.5);
+    }
+}
+
+.cta--gdpr-summary {
+    .cta__title {
+        margin-bottom: 0;
+    }
+
+    .cta__subtitle {
+        @include bold-font(14);
+    }
+    
+    .cta__meta {
+        @include core-font(14);
+    }
+
+    @include media($max-width: $min-desktop-width, $ignore-for-ie: true) {
+        .column {
+            width: 100%;
+            display: block;
+            float: none;
+        }
+
+        .column--rights {
+            display: none;
+        }
+
+        .cta__title {
+            margin-bottom: 0;
+        }
+
+        .cta__subtitle {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Detailed CTA (used in search results)
+.cta--detailed {
+    border-top: 1px solid $col-15;
+    padding: $gutter 0;
+
+    @include clearfix;
+
+    &:first-child {
+        border-top: none;
+    }
+
+    .cta__meta, {
+        @include core-font(14);
+    }
+
+    .cta__title {
+        display: inline-block;
+        margin: round($gutter * 0.5) 0;
+    }
+
+    .cta__assurance {
+        position: relative;
+        display: block;
+        padding: round($gutter * 0.5) 0 0;
+        
+        @include clearfix;
+
+        .cta__metas {
+            float: left;
+
+            @include clearfix;
+        }
+
+        .cta__badge {
+            position: absolute;
+            right: 0;
+        }
+
+        @include media(mobile) {
+            .cta__metas {
+                float: none;
+
+                .cta__meta {
+                    display: block;
+                }
+            }
+        }
+
+        @include media($max-width: $min-tablet-width, $ignore-for-ie: true) {
+            .cta__metas {
+                margin-bottom: $gutter * 0.5;
+            }
+
+            .cta__badge {
+                position: relative;
+                display: block;
+                right: auto;
+                clear: both;
+            }
+        }
+    }
+}
+
+// Stamped Publication CTAs
+.cta--stamped {
+    .cta__stamped-header {
+        position: relative;
+        display: table;
+        width: 100%;
+        vertical-align: top;
+        margin-bottom: round($gutter * 0.5);
+    }
+
+    .cta__stamped-header-col {
+        display: table-cell;
+        min-width: 100px;
+        vertical-align: top;
+
+        &.cta__stamped-header-col--right {
+            padding-top: 20px;
+            width: 100px;
+            text-align: right;
+        }
+    }
+}
+
+.cta__meta--reset-bottom {
+    margin-bottom: 0;
+}
+
+.debug {
+    .cta {
+        background: rgba(255, 255, 0, 0.2);
+    }
+}

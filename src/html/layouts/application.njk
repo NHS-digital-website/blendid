@@ -1,15 +1,17 @@
-{% from 'macros/helpers.html' import sprite %}
+{% from 'macros/helpers.njk' import sprite %}
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>{% block title %}{{ title }}{% endblock %}</title>
-    <link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" href="stylesheets/nhsuk.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include "shared/app-icons.html" %}
     {% block head %}{% endblock %}
+
+    {% include "shared/app-layout-head.njk" %}
   </head>
-  <body>
+
+  <body class="debug">
     {% block content %}{% endblock %}
     {% block javascript %}
       <script src="javascripts/app.js"></script>

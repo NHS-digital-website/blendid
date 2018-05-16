@@ -18,7 +18,7 @@
   },
 
   "stylesheets": {
-    "src": "stylesheets",
+    "src": "scss",
     "dest": "stylesheets"
   },
 
