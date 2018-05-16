@@ -1,26 +1,53 @@
-{#
-  Nunjucks Templating!
-  Homepage: https://mozilla.github.io/nunjucks/
-  Docs: https://mozilla.github.io/nunjucks/api.html
-#}
-
 {% from 'components/breadcrumb.njk' import breadcrumb %}
 {% from 'components/search-strip.njk' import searchStrip %}
+{% from 'components/cta.njk' import cta %}
 
 {% extends 'layouts/application.njk' %}
 
 {% block content %}
   
   <div class="grid-wrapper">
-    <div class="grid-row">
-      <div class="column column--reset">
-        {{ breadcrumb() }}
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Breadcrumb</h2>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column">
+          {{ breadcrumb() }}
+        </div>
       </div>
     </div>
 
-    <div class="grid-row">
-      <div class="column column--reset">
-        {{ searchStrip() }}
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Search strip</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          {{ searchStrip() }}
+        </div>
+      </div>
+    </div>
+
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Call To Action</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column column--one-half">
+           {{ cta("This is a call to action item", "Compellingly develop covalent core competencies and reliable imperatives. Monotonectally customize user-centric convergence and business action items.") }}
+        </div>
+
+        <div class="column column--one-half">
+           {{ cta("This is another call to action item", "Quickly grow holistic outsourcing and extensive content. Proactively fashion collaborative vortals without principle-centered schemas") }}
+        </div>
       </div>
     </div>
   </div>
