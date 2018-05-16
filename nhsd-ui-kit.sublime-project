@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"public"
+			],
+			"path": "."
+		},
+	],
+	"settings":
+	{
+		"font_size": 13,
+		"rulers":
+		[
+			72
+		],
+		"tab_size": 2,
+		"translate_tabs_to_spaces": true,
+		"word_wrap": true
+	}
+}
