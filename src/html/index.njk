@@ -1,6 +1,9 @@
 {% from 'components/breadcrumb.njk' import breadcrumb %}
 {% from 'components/search-strip.njk' import searchStrip %}
 {% from 'components/cta.njk' import cta %}
+{% from 'components/button.njk' import button %}
+{% from 'components/top-tasks.njk' import topTasks %}
+
 
 {% extends 'layouts/application.njk' %}
 
@@ -50,6 +53,17 @@
         </div>
       </div>
     </div>
+
+    <div class="article-section">
+      <div class="grid-row">
+        <div class="column column--two-thirds">
+          <h2>Button</h2>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column column--one-quarter">
+           {{ button("Hello world") }}         
+        </div>
   </div>
 
 {% endblock %}
