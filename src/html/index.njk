@@ -3,10 +3,8 @@
 {% from 'components/cta.njk' import cta %}
 {% from 'components/button.njk' import button %}
 {% from 'components/top-tasks.njk' import topTasks %}
-
-
+{% from 'components/page-nav.njk' import pageNav %}
 {% extends 'layouts/application.njk' %}
-
 {% block content %}
   
   <div class="grid-wrapper">
@@ -16,14 +14,12 @@
           <h2>Breadcrumb</h2>
         </div>
       </div>
-
       <div class="grid-row">
         <div class="column">
           {{ breadcrumb() }}
         </div>
       </div>
     </div>
-
     <div class="article-section">
       <div class="grid-row">
         <div class="column column--two-thirds">
@@ -36,7 +32,20 @@
         </div>
       </div>
     </div>
-
+    <div class="article-section">
+      
+      <div class="grid-row">
+        <div class="column column--one-third">
+          <h2>Page navigation</h2>
+          {{ pageNav () }}
+        </div>
+        
+        <div class="column column--two-thirds">
+          <h2>Top tasks</h2>
+          {{ topTasks ("hehehehe")}}
+        </div>
+      </div>
+    </div>
     <div class="article-section">
       <div class="grid-row">
         <div class="column column--two-thirds">
@@ -45,15 +54,13 @@
       </div>
       <div class="grid-row">
         <div class="column column--one-half">
-           {{ cta("This is a call to action item", "Compellingly develop covalent core competencies and reliable imperatives. Monotonectally customize user-centric convergence and business action items.") }}
+          {{ cta("This is a call to action item", "Compellingly develop covalent core competencies and reliable imperatives. Monotonectally customize user-centric convergence and business action items.") }}
         </div>
-
         <div class="column column--one-half">
-           {{ cta("This is another call to action item", "Quickly grow holistic outsourcing and extensive content. Proactively fashion collaborative vortals without principle-centered schemas") }}
+          {{ cta("This is another call to action item", "Quickly grow holistic outsourcing and extensive content. Proactively fashion collaborative vortals without principle-centered schemas") }}
         </div>
       </div>
     </div>
-
     <div class="article-section">
       <div class="grid-row">
         <div class="column column--two-thirds">
@@ -62,8 +69,7 @@
       </div>
       <div class="grid-row">
         <div class="column column--one-quarter">
-           {{ button("Hello world") }}         
+          {{ button("Hello world") }}
         </div>
-  </div>
-
-{% endblock %}
+      </div>
+    {% endblock %}
