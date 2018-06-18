@@ -4,6 +4,8 @@
 {% from 'components/button.njk' import button %}
 {% from 'components/top-tasks.njk' import topTasks %}
 {% from 'components/page-nav.njk' import pageNav %}
+{% from 'components/page-index.njk' import pageIndex %}
+
 {% extends 'layouts/application.njk' %}
 {% block content %}
   
@@ -27,7 +29,7 @@
         </div>
       </div>
       <div class="grid-row">
-        <div class="column column--two-thirds">
+        <div class="column">
           {{ searchStrip() }}
         </div>
       </div>
@@ -35,14 +37,22 @@
     <div class="article-section">
       
       <div class="grid-row">
-        <div class="column column--one-third">
-          <h2>Page navigation</h2>
+        <div class="column column--one-third page-block page-block--sidebar sticky sticky--top"">
+      
           {{ pageNav () }}
         </div>
         
         <div class="column column--two-thirds">
           <h2>Top tasks</h2>
-          {{ topTasks ("hehehehe")}}
+          {{ topTasks ("Task 1")}}
+        </div>
+      </div>
+
+      <div class="grid-row">
+        
+        <div class="column">
+          {{ pageIndex ("Refine results")}}
+
         </div>
       </div>
     </div>
@@ -64,7 +74,7 @@
     <div class="article-section">
       <div class="grid-row">
         <div class="column column--two-thirds">
-          <h2>Button</h2>
+          <h2>Buttons</h2>
         </div>
       </div>
       <div class="grid-row">
