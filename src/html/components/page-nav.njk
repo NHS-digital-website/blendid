@@ -1,15 +1,19 @@
-{% macro pageNav(label="Page contents") %}
+{% macro pageNav(label="Components") %}
+<div id="sticky-nav">
+<div class="artivle-section-navwrapper">
 <div class="article-section-nav">
   <h2 class="article-section-nav_title">{{label}}</h2>
   <hr>
   <nav role="navigation">
     <ol class="article-section-nav_list">
-      <li><a href="#">Apples</a></li>
-      <li><a href="#">Bananas</a></li>
-      <li><a href="#">Oranges</a></li>
-      <li><a href="#">Grapes</a></li>
-      <li><a href="#">Strawberries</a></li>
+      <li><a href="#">Pagination</a></li>
+      <li><a href="#">Breadcrumbs</a></li>
+      <li><a href="#">Headings</a></li>
+      <li><a href="#">Tabs</a></li>
+      <li><a href="#">Content box</a></li>
     </ol>
   </nav>
+</div>
+</div>
 </div>
 {% endmacro %}

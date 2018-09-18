@@ -4,11 +4,12 @@
 {% from 'components/button.njk' import button %}
 {% from 'components/top-tasks.njk' import topTasks %}
 {% from 'components/page-nav.njk' import pageNav %}
+{% from 'components/footer.njk' import footer %}
 {% from 'components/page-index.njk' import pageIndex %}
-
+{% from 'components/article-pagination.njk' import articlePagination %}
+{% from 'components/content-box.njk' import contentBox %}
 {% extends 'layouts/application.njk' %}
 {% block content %}
-  
   <div class="grid-wrapper">
     <div class="article-section">
       <div class="grid-row">
@@ -72,6 +73,22 @@
       </div>
     </div>
     <div class="article-section">
+      
+      <div class="grid-row">
+        
+        <h2>Content box</h2>
+        {{ contentBox ()}}
+      </div>
+    </div>
+    <div class="article-section">
+      
+      <div class="grid-row">
+        <h2>Pagination</h2>
+        {{ articlePagination ()}}
+
+      </div>
+    </div>
+    <div class="article-section">
       <div class="grid-row">
         <div class="column column--two-thirds">
           <h2>Buttons</h2>
@@ -79,7 +96,10 @@
       </div>
       <div class="grid-row">
         <div class="column column--one-quarter">
-          {{ button("Hello world") }}
+          {{ button("Hey there") }}
         </div>
       </div>
+    </div>
+  </div>
+
     {% endblock %}

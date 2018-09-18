@@ -1,3 +1,16 @@
 {% macro button(label = "I'm a button") %}
 <button class="button">{{ label }}</button>
+<button class="button--secondary">{{ label }}</button>
+<button class="button--tertiary">{{ label }}</button>
+<button class="button">{{ label }}</button>
+<button class="button button--small">{{ label }}</button>
+<button class="button button--tiny">{{ label }}</button>
+<button class="button" disabled>{{ label }}</button>
+<a class="button button--cancel" href="#">{{ label }}</a>
+<input type="submit" class="button" value="Submit">
+<button class="button">{{ label }}</button>
+<button class="button button--tiny">{{ label }}</button>
+<button class="button" disabled>{{ label }}</button>
+<a class="button button--cancel" href="#">{{ label }}</a>
+<input type="submit" class="button" value="Submit">
 {% endmacro %}
